@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="81.061928mm"
+   height="25.636549mm"
+   viewBox="0 0 81.061933 25.636549"
+   version="1.1"
+   id="svg891"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs885" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="124.54144"
+     inkscape:cy="-14.742801"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1850"
+     inkscape:window-height="1016"
+     inkscape:window-x="70"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata888">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-35.462102,-119.29609)">
+    <g
+       transform="matrix(0.56384525,0,0,0.56384525,15.467846,75.161382)"
+       aria-label="ಅಲರ್"
+       style="font-style:normal;font-weight:normal;font-size:61.74640656px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.54366004"
+       id="text817"
+       inkscape:export-filename="/home/kailash/code/go/my/knadh/dictionary-site/templates/static/logo.svg.png"
+       inkscape:export-xdpi="44.132771"
+       inkscape:export-ydpi="44.132771">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 41.731897,96.304657 q 0,1.447237 0.78392,2.472362 0.78392,1.025126 1.929649,1.025126 0.964825,0 1.628141,-1.025126 0.723619,-1.025125 0.723619,-2.472362 0,-1.447237 -0.723619,-2.472363 -0.663316,-1.085427 -1.628141,-1.085427 -1.145729,0 -1.929649,1.085427 -0.78392,1.025126 -0.78392,2.472363 z m 25.025134,6.271363 v 5.48743 H 53.068585 v -5.48743 h 6.753771 Q 58.556024,101.973 57.349993,99.621241 56.505772,97.9931 56.505772,96.304657 q 0,-3.798996 2.894473,-6.331661 2.592966,-2.291458 6.994977,-2.291458 4.522615,0 7.537691,4.100504 3.015076,4.100504 3.015076,11.035178 0,9.46734 -6.150755,15.19599 -6.150756,5.72864 -15.37689,5.72864 -9.045229,0 -14.532668,-5.66834 -5.427137,-5.66835 -5.427137,-15.13569 v 0 q 0,-6.934671 2.532664,-11.095476 2.592965,-4.160806 6.874374,-4.160806 3.075378,0 5.246233,2.532665 2.170855,2.532664 2.170855,6.090454 0,3.55779 -2.291458,6.090453 -2.291458,2.53267 -5.547741,2.53267 -0.663317,0 -1.56784,-0.18091 -0.844221,-0.24121 -1.929648,-0.60301 0,6.75377 3.9799,10.25126 5.246233,4.70351 10.793974,4.2814 8.140706,-0.60301 11.095481,-4.34171 6.814072,-8.56281 3.678393,-16.944726 -1.507538,-3.9799 -3.738695,-4.160805 -3.015076,-0.241206 -4.34171,2.231156 -0.78392,1.386936 -0.241206,3.376886 0.663317,2.592969 4.582916,3.738699 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.74876404px;font-family:'Lohit Kannada';-inkscape-font-specification:'Lohit Kannada Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-1.32291663px;writing-mode:lr-tb;text-anchor:start;stroke-width:1.54366004"
+         id="path866" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 90.881358,95.520737 q 0,1.326634 0.904523,2.231157 0.904523,0.904522 2.231157,0.904522 1.326633,0 2.231156,-0.904522 0.904523,-0.904523 0.904523,-2.231157 0,-1.326634 -0.904523,-2.231157 -0.904523,-0.904522 -2.231156,-0.904522 -1.326634,0 -2.231157,0.904522 -0.904523,0.904523 -0.904523,2.231157 z m 9.829152,22.733673 q 6.93467,0 11.09548,-4.0402 4.1608,-4.1005 4.1608,-10.85427 0,-3.37689 -2.17085,-6.331665 -2.11055,-2.954775 -5.66834,-4.643217 l 3.13567,-4.70352 q 4.64322,2.170855 7.41709,6.452264 2.77387,4.221107 2.77387,9.226138 0,9.22613 -5.66834,14.83417 -5.66834,5.54774 -15.07538,5.54774 -9.467343,0 -15.135686,-5.54774 -5.668344,-5.60804 -5.668344,-14.83417 0,-6.512569 4.100504,-11.095485 4.160806,-4.582917 10.010054,-4.582917 3.55779,0 6.090452,2.291458 2.53267,2.291459 2.53267,5.547741 0,3.376886 -2.53267,5.788943 -2.532662,2.41206 -6.090452,2.41206 -2.834172,0 -4.944726,-1.44723 -2.110553,-1.44724 -2.472362,-3.618094 -0.603015,0.723619 -0.904523,1.929654 -0.301508,1.20603 -0.301508,2.77387 0,6.75377 4.160806,10.85427 4.221107,4.0402 11.155785,4.0402 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.74876404px;font-family:'Lohit Kannada';-inkscape-font-specification:'Lohit Kannada Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-1.32291663px;writing-mode:lr-tb;text-anchor:start;stroke-width:1.54366004"
+         id="path868" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 130.08107,105.7117 q 0,5.18593 3.43719,8.86432 3.43718,3.67839 8.32161,3.67839 4.88442,0 8.32161,-3.67839 3.43719,-3.67839 3.43719,-8.86432 0,-5.18594 -3.43719,-8.864329 -3.43719,-3.678394 -8.32161,-3.678394 -4.88443,0 -8.32161,3.678394 -3.43719,3.678389 -3.43719,8.864329 z m 0.36181,-12.542723 h -5.84925 v -4.703519 h 37.38695 q 0.36181,-4.34171 3.19598,-7.236183 2.83417,-2.954775 6.57286,-2.954775 2.47237,0 4.52262,1.507538 2.05025,1.507539 2.95477,3.979901 l -3.91959,2.35176 q -0.84423,-1.447237 -1.80905,-2.291458 -0.96483,-0.844222 -1.74875,-0.844222 -1.92964,0 -3.31658,1.628142 -1.38693,1.567839 -1.38693,3.859297 h 2.35176 q 3.25628,0 5.54774,2.291458 2.29145,2.291458 2.29145,5.547741 0,3.256282 -2.29145,5.547743 -2.29146,2.29146 -5.54774,2.29146 -3.25629,0 -5.54775,-2.65327 -2.29145,-2.653269 -2.29145,-6.391964 v -1.929649 h -8.38192 q 2.83418,2.35176 4.34171,5.668344 1.56784,3.256279 1.56784,6.874379 0,7.47738 -5.06532,12.78392 -5.06533,5.24623 -12.18091,5.24623 -7.11558,0 -12.18091,-5.24623 -5.06533,-5.30654 -5.06533,-12.78392 0,-3.6181 1.50754,-6.874379 1.56784,-3.316584 4.34171,-5.668344 z m 35.81911,1.929649 q 0,1.809046 0.90452,3.075378 0.90452,1.266332 2.23116,1.266332 1.32663,0 2.23115,-1.145729 0.90452,-1.145729 0.90452,-2.77387 0,-0.964824 -0.90452,-1.628141 -0.90452,-0.723619 -2.23115,-0.723619 h -3.13568 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.74876404px;font-family:'Lohit Kannada';-inkscape-font-specification:'Lohit Kannada Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-1.32291663px;writing-mode:lr-tb;text-anchor:start;stroke-width:1.54366004"
+         id="path870" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+{{ define "header" }}<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>
+    {{- if eq .Page "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Kannada - English dictionary
+    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Kannada - English words glossary
+    {{- else if eq .Page "search" }}"{{ .Query.Query }}" ಅರ್ಥ / English meaning of "{{ .Query.Query }}"
+    {{- else if ne .Title "" }}{{ .Title }}
+    {{- else }}{{ block "title" . }}{{end}}
+    {{- end -}}
+  </title>
+  <meta name="description" value="
+    {{- if eq .Page "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Kannada - English dictionary
+    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Kannada - English words glossary
+    {{- else if eq .Page "search" }}{{ .Query.Query }} ಅರ್ಥ / English meaning of {{ .Query.Query }}
+    {{- else if ne .Description "" }}{{ .Description }}
+    {{- else }}{{ block "description" . }}{{end}}
+    {{- end -}}" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <link href="/static/flexit.css" rel="stylesheet" type="text/css" />
+  <link href="/static/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="{{ if eq .Page "/"}}home{{ end }}">
+  <div class="container wrap">
+    <header class="header">
+      <div class="row">
+        <div class="logo four columns">
+          <a href="/"><img src="/static/logo.svg" alt="Alar logo" title="Alar: Kannada - English dictionary" /></a>
+          <div class="taglines">
+            <p class="tagline-native">
+              ಶ್ರೀ. ವಿ. ಕೃಷ್ಣ ಅವರ ಕನ್ನಡ - ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು
+            </p>
+            <p class="tagline-english">
+              <strong><em>&ldquo;Alar&rdquo;</em></strong> V. Krishna's Kannada
+              &rarr; English dictionary
+            </p>
+          </div>
+        </div><!-- logo col -->
+
+        <div class="search eight columns">
+          <form class="search-form" method="get" action="/dictionary/kannada/english">
+            <div>
+              <input onkeypress="convertThis(event)" autofocus placeholder="eg: ಹೆಸರು, hesaru" type="text" name="q" value="{{ if .Query }}{{ .Query.Query }}{{ end }}" />
+              <button type="submit"><img src="/static/search.svg" alt="Search" /></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+{{ end}}
+
+{{ define "footer" }}
+    <nav class="nav">
+      <a href="/glossary/kannada/english/ಅ">ಪದಗಳ ಗ್ಲಾಸರಿ (Glossary)</a>
+      <a href="/pages/about">ಬಗ್ಗೆ (About)</a>
+    </nav>
+  </div>
+  <footer class="footer">
+    Data &copy; V. Krishna <span class="slash">/</span>
+    Built with <a href="https://github.com/knadh/dictmaker">dictmaker</a> <span class="slash">/</span>
+    Supported by
+    <a href="https://zerodha.com" class="credit"><img src="https://zerodha.com/static/images/logo.svg"
+        alt="Zerodha" /></a>
+  </footer>
+  <script src="/static/global.js"></script>
+  <script src="/static/kannada.js"></script>
+</body>
+
+</html>
+{{ end }}
