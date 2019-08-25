@@ -3,22 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <title>
-    {{- if eq .Page "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Kannada - English dictionary
-    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Kannada - English words glossary
-    {{- else if eq .Page "search" }}"{{ .Query.Query }}" ಅರ್ಥ / English meaning of "{{ .Query.Query }}"
+    {{- if eq .Page "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Free, open source Kannada - English dictionary
+    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Free, open source Kannada - English words glossary
+    {{- else if eq .Page "search" }}"{{ .Query.Query }}" ಅರ್ಥ / English meaning of "{{ .Query.Query }}. Free Kannada-English dictionary."
     {{- else if ne .Title "" }}{{ .Title }}
     {{- else }}{{ block "title" . }}{{end}}
     {{- end -}}
   </title>
   <meta name="description" value="
-    {{- if eq .Page "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Kannada - English dictionary
-    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Kannada - English words glossary
-    {{- else if eq .Page "search" }}{{ .Query.Query }} ಅರ್ಥ / English meaning of {{ .Query.Query }}
+    {{- if eq .Page "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Free and open source Kannada - English dictionary with lakhs of meanings and pronunciations.
+    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Free and open source Kannada - English words glossary with lakhs of words.
+    {{- else if eq .Page "search" }}{{ .Query.Query }} ಅರ್ಥ / English meaning of {{ .Query.Query }}. Free Kannada-English dictionary.
     {{- else if ne .Description "" }}{{ .Description }}
     {{- else }}{{ block "description" . }}{{end}}
     {{- end -}}" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	
+	<link rel="image_src" href="https://alar.ink/static/thumb.png" />
+	<meta property="og:image" content="https://alar.ink/static/thumb.png" />
+	<link rel="shortcut icon" href="https://alar.ink/static/favicon.png" type="image/x-icon" />
+
   <link href="/static/flexit.css" rel="stylesheet" type="text/css" />
   <link href="/static/style.css" rel="stylesheet" type="text/css" />
 </head>
