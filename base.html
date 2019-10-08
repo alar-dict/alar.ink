@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <title>
-    {{- if eq .Page "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Free, open source Kannada - English dictionary
-    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Free, open source Kannada - English words glossary
-    {{- else if eq .Page "search" }}"{{ .Query.Query }}" ಅರ್ಥ / English meaning of "{{ .Query.Query }}. Free Kannada-English dictionary."
+    {{- if eq .Page "/" }}Alar (ಅಲರ್). Kannada - English dictionary. ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು.
+    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Kannada - English words glossary and dictionary
+    {{- else if eq .Page "search" }}"{{ .Query.Query }}" &mdash; Kannada (ಅರ್ಥ) to English meaning of "{{ .Query.Query }}."
     {{- else if ne .Title "" }}{{ .Title }}
     {{- else }}{{ block "title" . }}{{end}}
     {{- end -}}
