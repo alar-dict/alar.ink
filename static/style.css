@@ -127,31 +127,18 @@ button:hover,
 .entries .entry {
   margin-bottom: 30px;
 }
-.entries .title {
-  margin: 0;
+.entries .head {
+  margin-bottom: 10px;
 }
+  .entries .title {
+    margin: 0;
+  }
   .entries .pronun {
     color: #888;
-  }
-  .entries .defs {
-    margin-top: 10px;
   }
   .entries .defs li {
     margin: 0 0 10px 0;
     display: flex;
-  }
-  .entries .defs .types {
-    color: #888;
-    font-style: italic;
-    border-bottom: 1px dashed #888;
-    display: inline-block;
-    margin-right: 15px;
-  }
-  .entries .defs .def {
-    display: inline-block;
-    width: 95%;
-  }
-  .entries .defs li {
     counter-increment: list;
     list-style-type: none;
     position: relative;
@@ -164,6 +151,16 @@ button:hover,
     text-align: right;
     width: 26px;
   }
+  .entries .defs .types {
+    margin-left: -40px;
+    margin-bottom: 10px;
+  }
+    .entries .defs .types span {
+      color: #888;
+      font-style: italic;
+      border-bottom: 1px dashed #888;
+    }
+
 
 .glossary .index {
   background: #f7f7f7;
