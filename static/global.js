@@ -1,4 +1,7 @@
 (function() {
+    // Attach the transliterator to the search box.
+    document.querySelector("#q").onkeypress = KNTranslit.Transliterate;
+
     var form = document.querySelector(".search-form");
     if(!form) {
         return false;

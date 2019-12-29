@@ -47,7 +47,7 @@
         <div class="search eight columns">
           <form class="search-form" method="get" action="/dictionary/kannada/english">
             <div>
-              <input onkeypress="convertThis(event)" autofocus placeholder="eg: ಹೆಸರು, hesaru" type="text" name="q" value="{{ if .Query }}{{ .Query.Query }}{{ end }}" />
+              <input autofocus placeholder="eg: ಹೆಸರು, hesaru" type="text" id="q" name="q" value="{{ if .Query }}{{ .Query.Query }}{{ end }}" />
               <button type="submit"><img src="/static/search.svg" alt="Search" /></button>
             </div>
           </form>
@@ -69,8 +69,8 @@
     <a href="https://zerodha.com" class="credit"><img src="https://zerodha.com/static/images/logo.svg"
         alt="Zerodha" /></a>
   </footer>
+  <script src="/static/kn-transliterate.js"></script>
   <script src="/static/global.js"></script>
-  <script src="/static/kannada.js"></script>
 </body>
 
 </html>
