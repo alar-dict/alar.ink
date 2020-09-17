@@ -291,10 +291,33 @@ button:hover,
   flex: none;
 }
 
+/* Autocomplete */
+.autocomplete {
+    background: white;
+    z-index: 1000;
+    overflow: auto;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.autocomplete > div {
+    padding: 2px 10px;
+}
+
+.autocomplete .group {
+    background: #eee;
+}
+
+.autocomplete > div:hover:not(.group),
+.autocomplete > div.selected {
+    background: #eee;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 775px) {
   .wrap {
     margin: 0 0 15px 0;
-    padding: 15px 15px 60px 15px;
+    padding: 30px 30px 60px 30px;
     width: 100%;
     max-width: 100%;
   }
