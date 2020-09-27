@@ -37,6 +37,12 @@ function transliterate(q, update) {
   //   transliterate(e.target.value);
   // };
 
+  var form = document.querySelector(".search-form");
+  if (!form) {
+    return false;
+  }
+
+
   autocomplete({
     input: document.querySelector("#q"),
     fetch: function(text, update) {
@@ -44,13 +50,9 @@ function transliterate(q, update) {
     },
     onSelect: function(item) {
       this.input.value = item.label;
+      form.submit();
     }
   });
-
-  var form = document.querySelector(".search-form");
-  if (!form) {
-    return false;
-  }
 
   // Capture the form submit and send it as a canonical URL instead
   // of the ?q query param. 
