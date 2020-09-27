@@ -50,13 +50,26 @@ function transliterate(q, update) {
     },
     onSelect: function(item) {
       this.input.value = item.label;
-      form.submit();
+      search();
+      return false;
     }
   });
 
   // Capture the form submit and send it as a canonical URL instead
   // of the ?q query param. 
-  form.onsubmit = function() {
+  var isOn = false;
+  function search() {
+    // The autocomplete suggestion click doesn't fire a submit, but Enter
+    // fires a submit. So to avoid double submits in autcomplete.onSelect(),
+    // add a debounce.
+    if (isOn) {
+      return false;
+    }
+    isOn = true;
+    window.setTimeout(function() {
+      isOn = false;
+    }, 50);
+
     var f = form.querySelector("input[name='q']");
     if (!f) {
       return false;
@@ -64,5 +77,10 @@ function transliterate(q, update) {
     var q = encodeURIComponent(f.value.replace(/\s+/g, " ").trim()).replace(/%20/g, "+");
     document.location.href = form.getAttribute("action") + "/" + q;
     return false;
-  };
+  }
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    search();
+  });
 })();
