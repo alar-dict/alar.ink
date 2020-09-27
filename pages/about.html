@@ -2,55 +2,57 @@
 {{ define "description" }}About V. Krishna's Alar (Kannada-English dictionary){{ end }}
 {{ define "page-about" }}
 {{ template "header" . }}
-<section class="content">
+<section class="content about">
     <h1>About</h1>
     <p>
-        <em>Alar</em> is built on top of the Kannada-English dictionary corpus
-        created by Sri. V. Krishna. It contains over 150,000 Kannada word
-        entries with over 240,000 English definitions. It is released
-        as an open-data corpus licensed under
+        <em>Alar</em> is an authoritative Kannada-English dictionary corpus
+        created by V. Krishna. It contains over 150,000 Kannada words
+        with over 240,000 English definitions. It is released
+        as an open data corpus licensed under
         the Open Database License (<a href="https://opendatacommons.org/licenses/odbl/summary/index.html">ODC-ODbL</a>).
     </p>
-    <h3>Sri. V. Krishna</h3>
+    <h3>V. Krishna</h3>
     <p>
-        Sri. V. Krishna started building his Kannada-English dictionary in the 1980s
+        <img src="/static/vkrishna.png" alt="Photo of V. Krishna" class="photo" />
+        V. Krishna started building his Kannada-English dictionary in the 1970s
         as a hobby project. This incredible endeavour spanning four decades
-        has evolved into an invaluable contribution to Kannada language.
+        has now evolved into an invaluable contribution to Kannada language.
         In addition to authoring the colossal dictionary, he single-handedly digitised
-        his original paper manuscripts.
-    </p>
-    <p>
-        By open sourcing his life's work, Sri. V. Krishna has donated an invaluable
-        resource to posterity. A unique feat in itself.
+        his original manuscripts. In 2019, he open sourced the entire dictionary.
+        <a href="https://zerodha.tech/blog/alar-the-making-of-an-open-source-dictionary">Read the full story here</a>.
     </p>
     <p>
         He is a resident of Bengaluru and spends his time working on his dictionary
         and other Kannada literature projects. He has recently started laying
-        the foundations for a new English-Kannada dictionary. He can be reached at
-        vkrishna1411&#064;yahoo.co.in.
+        foundations for a new English-Kannada dictionary. He can be reached at
+        <a href="vkrishna1411&#064;yahoo.co.in">vkrishna1411&#064;yahoo.co.in</a>.
     </p>
     <hr />
-    <p>
-        <a href="http://www.kagapa.in/kannada/">Kannada Ganaka Parishat (KaGaPa)</a>,
-        has played a pivotal role in promoting digital Kannada, and 
-        has supported Sri. V. Krishna in his endeavours. 
-    </p>
-    <hr />
+
     <p><a href="https://zerodha.com"><img height="18px" src="https://zerodha.com/static/images/logo.svg"
         alt="Zerodha" /></a></p>
-    <p>In 2019, <a href="https://zerodha.com">Zerodha</a> collaborated with 
-        Sri. V. Krishna to bring his dictionary online and 
-        awarded him an academic grant to support his continued work.
+    <p>In 2019, <a href="https://zerodha.tech/blog/alar-the-making-of-an-open-source-dictionary">Zerodha collaborated</a> with 
+        V. Krishna to open source and publish his dictionary online and 
+        awarded him a grant to support his work.
     </p>
     <hr />
-    <h3>The website</h3>
+
+    <h3>Data</h3>
     <p>
-        This website is powered by <a href="https://github.com/knadh/dictmaker">dictmaker</a>,
+        The entire corpus (&copy; V. Krishna) is available on the <a href="https://github.com/alar-dict">Alar repository</a>.
+        It is licensed under <a href="https://opendatacommons.org/licenses/odbl/summary/index.html">ODC-ODbL</a>.
+    </p>
+
+    <h3>Website</h3>
+    <p>
+        This website is published using <a href="https://github.com/knadh/dictmaker">dictmaker</a>,
         and uses <a href="https://github.com/knadh/knphone">knphone</a>, a Kannada phonetic
-        indexing algorithm for search. Any technical feedback,
-        please e-mail kailash&#064;<a href="https://nadh.in">nadh.in</a>.
+        indexing algorithm, for search. Search suggestions and transliterations are powered by <a href="https://github.com/varnamproject">Varnam</a>.      
+        The website's source is <a href="https://github.com/alar-dict/website">available here</a>.
+    </p>
+    <p>
+        Technical feedback can be sent to <a href="mailto:kailash&#064;nadh.in">kailash&#064;nadh.in</a>.
     </p>
 </section>
 {{ template "footer" . }}
-
 {{ end }}

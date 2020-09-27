@@ -47,7 +47,7 @@
         <div class="search eight columns">
           <form class="search-form" method="get" action="/dictionary/kannada/english">
             <div>
-              <input autofocus placeholder="eg: ಹೆಸರು, hesaru" type="text" id="q" name="q" value="{{ if .Query }}{{ .Query.Query }}{{ end }}" />
+              <input autofocus autocomplete="off" placeholder="eg: ಹೆಸರು, hesaru" type="text" id="q" name="q" value="{{ if .Query }}{{ .Query.Query }}{{ end }}" />
               <button type="submit"><img src="/static/search.svg" alt="Search" /></button>
             </div>
           </form>
@@ -64,10 +64,10 @@
     </nav>
   </div>
   <footer class="footer">
-    Data &copy; V. Krishna <span class="slash">/</span>
-    <a href="https://github.com/knadh/dictmaker">Built with dictmaker</a> <span class="slash">/</span>
-    Supported by
-    <a href="https://zerodha.com" class="credit"><img src="https://zerodha.com/static/images/logo.svg"
+    Data &copy; V. Krishna <span class="slash">•</span>
+    <a href="https://github.com/knadh/dictmaker">built with dictmaker</a> <span class="slash">•</span>
+    supported by
+    <a href="https://zerodha.tech/alar-open-source-kannada-english-dictionary" class="credit"><img src="https://zerodha.com/static/images/logo.svg"
         alt="Zerodha" /></a>
   </footer>
   <script src="/static/autocomplete.js"></script>

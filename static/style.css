@@ -291,6 +291,15 @@ button:hover,
   flex: none;
 }
 
+/* About */
+.about .photo {
+  display: inline-block;
+  margin: 0 15px;
+  float: right;
+  width: 200px;
+  height: auto;;
+}
+
 /* Autocomplete */
 .autocomplete {
     background: white;
@@ -327,6 +336,11 @@ button:hover,
   }
   .footer {
     margin-bottom: 15px;
+  }
+  .about .photo {
+    float: none;
+    display: block;
+    margin: 15px auto;
   }
 }
 @media screen and (max-width: 550px) {
