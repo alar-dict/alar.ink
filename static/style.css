@@ -99,8 +99,6 @@ button:hover,
 }
 .search-form input {
   width: 100%;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 .search-form button {
   position: absolute;
