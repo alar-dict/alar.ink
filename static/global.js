@@ -21,6 +21,10 @@ function transliterate(q, update) {
     });
 }
 
+function isKannada(str) {
+  return /[\u0C80-\u0CFF]/.test(str);
+}
+
 
 (function() {
   var isAndroid = /android/ig.test(window.navigator.userAgent);
@@ -79,8 +83,52 @@ function transliterate(q, update) {
     return false;
   }
 
+  // Bind to form submit.
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     search();
   });
+})();
+
+
+(function() {
+  // In the results (definitions), if there are Kannada words, hyperlink
+  // them to search.
+  let defs = document.querySelectorAll(".defs .d");
+  if (!defs || defs.length === 0) {
+    return;
+  }
+
+  for (let i = 0; i < defs.length; i++) {
+    // Go through each definition. Ignore the ASCII ones.
+    console.log(defs[i].innerText, isKannada(defs[i].innerText));
+    if (!isKannada(defs[i].innerText)) {
+      continue;
+    }
+
+    // Split the word and iterate through it, turning non-ASCII words into
+    // hyperlinks;
+    const parts = defs[i].innerText.split(" ");
+    const s = document.createElement("span");
+
+    parts.forEach((v) => {
+      if (!isKannada(v)) {
+        // ASCII word. Append the text as-is.
+        s.appendChild(document.createTextNode(v));
+      } else {
+        // Non-ASCII word. Turn into a link.
+        const a = document.createElement("a");
+        a.setAttribute("href", v);
+        a.appendChild(document.createTextNode(v));
+        s.appendChild(a);
+      }
+
+      // Append a space.
+      s.appendChild(document.createTextNode(" "));
+    });
+
+    defs[i].innerHTML = "";
+    defs[i].appendChild(s);
+  }
+
 })();
