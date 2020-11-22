@@ -21,7 +21,7 @@ function transliterate(q, update) {
     });
 }
 
-function isKannada(str) {
+function hasKannadaChar(str) {
   return /[\u0C80-\u0CFF]/.test(str);
 }
 
@@ -92,6 +92,8 @@ function isKannada(str) {
 
 
 (function() {
+    const reMatchKannadaWord = new RegExp(/[\u0C80-\u0CFF]+/g);
+    const reMatchNonKannadaBlobs = new RegExp(/[^\u0C80-\u0CFF]+/g);
   // In the results (definitions), if there are Kannada words, hyperlink
   // them to search.
   let defs = document.querySelectorAll(".defs .d");
@@ -101,8 +103,7 @@ function isKannada(str) {
 
   for (let i = 0; i < defs.length; i++) {
     // Go through each definition. Ignore the ASCII ones.
-    console.log(defs[i].innerText, isKannada(defs[i].innerText));
-    if (!isKannada(defs[i].innerText)) {
+    if (!hasKannadaChar(defs[i].innerText)) {
       continue;
     }
 
@@ -112,15 +113,21 @@ function isKannada(str) {
     const s = document.createElement("span");
 
     parts.forEach((v) => {
-      if (!isKannada(v)) {
+      if (!hasKannadaChar(v)) {
         // ASCII word. Append the text as-is.
         s.appendChild(document.createTextNode(v));
       } else {
         // Non-ASCII word. Turn into a link.
         const a = document.createElement("a");
-        a.setAttribute("href", v);
-        a.appendChild(document.createTextNode(v));
+
+        // Some Kannada words have numbers or "." at the end of them
+        // They need to be cleaned, else they'll be part of the query, and fudge results
+        const kannadaWord = v.replace(reMatchNonKannadaBlobs, "");
+        const nonKannadaTrailingSymbol = v.replace(reMatchKannadaWord,"");
+        a.setAttribute("href", kannadaWord);
+        a.appendChild(document.createTextNode(kannadaWord));
         s.appendChild(a);
+        s.appendChild(document.createTextNode(nonKannadaTrailingSymbol));
       }
 
       // Append a space.
