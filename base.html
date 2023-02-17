@@ -19,7 +19,7 @@
     {{- end -}}" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-	
+
 	<link rel="image_src" href="https://alar.ink/static/thumb.png" />
 	<meta property="og:image" content="https://alar.ink/static/thumb.png" />
 	<link rel="shortcut icon" href="https://alar.ink/static/favicon.png" type="image/x-icon" />
@@ -47,7 +47,7 @@
         <div class="search eight columns">
           <form class="search-form" method="get" action="/dictionary/kannada/english">
             <div>
-              <input autofocus autocomplete="off" placeholder="eg: ಹೆಸರು, hesaru" type="text" id="q" name="q" value="{{ if .Query }}{{ .Query.Query }}{{ end }}" />
+              <input autofocus required autocomplete="off" placeholder="eg: ಹೆಸರು, hesaru" type="text" id="q" name="q" value="{{ if .Query }}{{ .Query.Query }}{{ end }}" />
               <button type="submit"><img src="/static/search.svg" alt="Search" /></button>
             </div>
           </form>
