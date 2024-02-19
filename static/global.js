@@ -92,7 +92,6 @@ function hasKannadaChar(str) {
 
 
 (function() {
-    const reMatchKannadaWord = new RegExp(/[\u0C80-\u0CFF]+/g);
     const reMatchNonKannadaBlobs = new RegExp(/[^\u0C80-\u0CFF]+/g);
   // In the results (definitions), if there are Kannada words, hyperlink
   // them to search.
@@ -120,14 +119,18 @@ function hasKannadaChar(str) {
         // Non-ASCII word. Turn into a link.
         const a = document.createElement("a");
 
-        // Some Kannada words have numbers or "." at the end of them
-        // They need to be cleaned, else they'll be part of the query, and fudge results
+        // Some Kannada words have non-Kannada characters around them,
+        // the hyperlink should be formed only for Kannada words, while retaining all the characters order
         const kannadaWord = v.replace(reMatchNonKannadaBlobs, "");
-        const nonKannadaTrailingSymbol = v.replace(reMatchKannadaWord,"");
+        const nonKannadaWords = v.split(kannadaWord);
+
+        nonKannadaWords[0] && s.appendChild(document.createTextNode(nonKannadaWords[0]));
+
         a.setAttribute("href", kannadaWord);
         a.appendChild(document.createTextNode(kannadaWord));
         s.appendChild(a);
-        s.appendChild(document.createTextNode(nonKannadaTrailingSymbol));
+
+        nonKannadaWords[1] && s.appendChild(document.createTextNode(nonKannadaWords[1]));
       }
 
       // Append a space.
