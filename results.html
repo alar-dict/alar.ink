@@ -1,16 +1,16 @@
 {{ define "results" }}
 <ol class="entries">
-    {{ range $k, $r := .Entries }}
+    {{ range $k, $r := .Data.Results.Entries }}
         <li class="entry" data-guid="{{ $r.GUID }}">
             <header class="head">
                 <h3 class="title">{{ $r.Content }}</h3>
-                <span class="pronun">♪ {{ JoinStrings $r.Phones "," }}</span>
+                <span class="pronun">♪ {{ $r.Phones | join "," }}</span>
             </header>
 
             <ol class="defs">
                 {{ $prevTypes := "" }}
                 {{ range $k, $d := $r.Relations }}
-                    {{ $types := (JoinStrings $d.RelationTypes ", ") }}
+                    {{ $types := ($d.RelationTypes | join ", ") }}
                     {{ if ne $prevTypes $types }}
                     <div class="types">
                         <span>{{ $types }}</span>

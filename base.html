@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <title>
-    {{- if eq .Page "/" }}Alar (ಅಲರ್). Kannada - English dictionary. ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು.
-    {{- else if eq .Page "glossary" }}ಕನ್ನಡ ಪದಕೋಶ. Kannada - English words glossary and dictionary
-    {{- else if eq .Page "search" }}"{{ .Query.Query }}" &mdash; Kannada (ಅರ್ಥ) to English meaning of "{{ .Query.Query }}."
-    {{- else if ne .Title "" }}{{ .Title }}
+    {{- if eq .Data.PageType "/" }}Alar (ಅಲರ್). Kannada - English dictionary. ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು.
+    {{- else if eq .Data.PageType "glossary" }}ಕನ್ನಡ ಪದಕೋಶ. Kannada - English words glossary and dictionary
+    {{- else if eq .Data.PageType "search" }}"{{ .Data.Query.Query }}" &mdash; Kannada (ಅರ್ಥ) to English meaning of "{{ .Data.Query.Query }}."
+    {{- else if ne .Data.Title "" }}{{ .Data.Title }}
     {{- else }}{{ block "title" . }}{{end}}
     {{- end -}}
   </title>
   <meta name="description" value="
-    {{- if eq .Page "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Free and open source Kannada - English dictionary with lakhs of meanings and pronunciations.
-    {{- else if eq .Page "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Free and open source Kannada - English words glossary with lakhs of words.
-    {{- else if eq .Page "search" }}{{ .Query.Query }} ಅರ್ಥ / English meaning of {{ .Query.Query }}. Free Kannada-English dictionary.
-    {{- else if ne .Description "" }}{{ .Description }}
+    {{- if eq .Data.PageType "/" }}ಅಲರ್ (Alar) ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ನಿಘಂಟು. Free and open source Kannada - English dictionary with lakhs of meanings and pronunciations.
+    {{- else if eq .Data.PageType "glossary" }}ಕನ್ನಡ-ಇಂಗ್ಲಿಷ್ ಪದಗಳ ಗ್ಲಾಸರಿ. Free and open source Kannada - English words glossary with lakhs of words.
+    {{- else if eq .Data.PageType "search" }}{{ .Data.Query.Query }} ಅರ್ಥ / English meaning of {{ .Data.Query.Query }}. Free Kannada-English dictionary.
+    {{- else if ne .Data.Description "" }}{{ .Data.Description }}
     {{- else }}{{ block "description" . }}{{end}}
     {{- end -}}" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,7 +27,7 @@
   <link href="/static/flexit.css" rel="stylesheet" type="text/css" />
   <link href="/static/style.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="{{ if eq .Page "/"}}home{{ end }}">
+<body class="{{ if eq .Data.PageType "/"}}home{{ end }}">
   <div class="container wrap">
     <header class="header">
       <div class="row">
@@ -47,7 +47,7 @@
         <div class="search eight columns">
           <form class="search-form" method="get" action="/dictionary/kannada/english">
             <div>
-              <input autofocus required autocomplete="off" placeholder="eg: ಹೆಸರು, hesaru" type="text" id="q" name="q" value="{{ if .Query }}{{ .Query.Query }}{{ end }}" />
+              <input autofocus required autocomplete="off" placeholder="eg: ಹೆಸರು, hesaru" type="text" id="q" name="q" value="{{ if .Data.Query }}{{ .Data.Query.Query }}{{ end }}" />
               <button type="submit"><img src="/static/search.svg" alt="Search" /></button>
             </div>
           </form>
