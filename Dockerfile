@@ -71,7 +71,7 @@ EXPOSE 8123
 WORKDIR /varnamd
 
 RUN echo "#!/bin/bash" >> /varnamd/startup.sh
-# RUN echo "varnamcli -s kn -learn-from-file /varnamd/input/words.txt" >> /varnamd/startup.sh
+RUN echo "varnamcli -s kn -learn-from-file /varnamd/input/words.txt" >> /varnamd/startup.sh
 RUN echo "varnamcli -s kn -train-from-file /varnamd/input/training.txt" >> /varnamd/startup.sh
 RUN echo "/usr/local/bin/varnamd --config /varnamd/config.toml" >> /varnamd/startup.sh
 RUN chmod +x /varnamd/startup.sh

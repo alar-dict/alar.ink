@@ -101,7 +101,8 @@ generate_cv
 
 
 tag "chill" do
-   consonants ["m", ["n"]] => ["ಂ"]
+   consonants "m" => ["ಂ","ಮ"]
+   consonants "n" => ["ಂ","ನ\u0CCD"]
    consonants "r" => ["ರ\u0CCD"]
 end
 
